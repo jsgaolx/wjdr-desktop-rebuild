@@ -1,0 +1,20 @@
+# Local credentials and generated files
+sdk-app.properties
+*.dpapi
+.env
+.env.*
+*token*.txt
+/runtime/
+/output/
+/dist/
+__pycache__/
+*.pyc
+*.log
+*.zip
+*.exe
+
+# Editor files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
