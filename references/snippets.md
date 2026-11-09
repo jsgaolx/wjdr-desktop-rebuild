@@ -1,6 +1,6 @@
 # 少量关键参考片段
 
-以下三个短片段解释独立机制，不包含完整 SDK、通信层、界面或可运行游戏助手。调用方的前提写在各段前，联网字段与结果仍按教程实现。
+以下短片段解释独立机制，不包含完整 SDK、通信层、界面或可运行游戏助手。调用方的前提写在各段前，联网字段与结果仍按教程实现。
 
 ## 1. 北京时间转换到单调截止点
 
@@ -50,3 +50,25 @@ def split_token(text):
 ```
 
 这仅检查文本可拆分，不验证会话，也不读取任何外部账号。复制/导出按相同格式拼接；会话是否有效交给正常登录流程确认。
+
+## 4. 将 SDK 资源转换为应用参数
+
+前提：resource_hex 是用户从基线 APK 取出的 secret_android_game 完整文本；依赖 cryptography 的加密原语。函数只转换参数，不登录、不发请求，不打印配置。文件读取仍由调用方按 UTF-8 完成。
+
+~~~python
+import hashlib
+import json
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.primitives.padding import PKCS7
+
+def decode_sdk_resource(resource_hex):
+    """按基线 SDK 算法解出应用参数；不处理账号会话或网络请求。"""
+    key = hashlib.md5(b"com.gof.china..").digest()
+    decoder = Cipher(algorithms.AES(key), modes.ECB()).decryptor()
+    padded = decoder.update(bytes.fromhex(resource_hex.strip())) + decoder.finalize()
+    unpadder = PKCS7(128).unpadder()
+    clear = unpadder.update(padded) + unpadder.finalize()
+    return json.loads(clear.decode("utf-8"))
+~~~
+
+结果的 game_id/game_key 用于 [登录规格](login-communication.md) 的 SDK 签名。无需把完整 SDK 代码或某个账号配置随 Skill 发布。

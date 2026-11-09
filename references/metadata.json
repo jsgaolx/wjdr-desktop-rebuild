@@ -1,0 +1,437 @@
+{
+  "baseline": "CN Android 1.16.11 / baidu_cn",
+  "note": "静态名称/等级资料；实际持有和可用数量来自当前角色通知。",
+  "items": {
+    "301901": {
+      "name": "二阶行军加速",
+      "rate": 0.5
+    },
+    "301951": {
+      "name": "霜龙集结二阶行军加速",
+      "rate": 0.5
+    },
+    "610104": {
+      "name": "高级迁城"
+    }
+  },
+  "diamond_resource_id": 101,
+  "soldiers": {
+    "10100": {
+      "soldier_type": 1,
+      "lv": 1,
+      "name": "见习盾兵"
+    },
+    "10200": {
+      "soldier_type": 1,
+      "lv": 2,
+      "name": "老练盾兵"
+    },
+    "10300": {
+      "soldier_type": 1,
+      "lv": 3,
+      "name": "资深盾兵"
+    },
+    "10400": {
+      "soldier_type": 1,
+      "lv": 4,
+      "name": "百战盾兵"
+    },
+    "10500": {
+      "soldier_type": 1,
+      "lv": 5,
+      "name": "刚毅盾兵"
+    },
+    "10600": {
+      "soldier_type": 1,
+      "lv": 6,
+      "name": "英勇盾兵"
+    },
+    "10700": {
+      "soldier_type": 1,
+      "lv": 7,
+      "name": "无畏盾兵"
+    },
+    "10800": {
+      "soldier_type": 1,
+      "lv": 8,
+      "name": "精锐盾兵"
+    },
+    "10900": {
+      "soldier_type": 1,
+      "lv": 9,
+      "name": "荣耀盾兵"
+    },
+    "11000": {
+      "soldier_type": 1,
+      "lv": 10,
+      "name": "王牌盾兵"
+    },
+    "11100": {
+      "soldier_type": 1,
+      "lv": 11,
+      "name": "烈日盾兵"
+    },
+    "11200": {
+      "soldier_type": 1,
+      "lv": 12,
+      "name": "煌耀盾兵"
+    },
+    "20100": {
+      "soldier_type": 2,
+      "lv": 1,
+      "name": "见习矛兵"
+    },
+    "20200": {
+      "soldier_type": 2,
+      "lv": 2,
+      "name": "老练矛兵"
+    },
+    "20300": {
+      "soldier_type": 2,
+      "lv": 3,
+      "name": "资深矛兵"
+    },
+    "20400": {
+      "soldier_type": 2,
+      "lv": 4,
+      "name": "百战矛兵"
+    },
+    "20500": {
+      "soldier_type": 2,
+      "lv": 5,
+      "name": "刚毅矛兵"
+    },
+    "20600": {
+      "soldier_type": 2,
+      "lv": 6,
+      "name": "英勇矛兵"
+    },
+    "20700": {
+      "soldier_type": 2,
+      "lv": 7,
+      "name": "无畏矛兵"
+    },
+    "20800": {
+      "soldier_type": 2,
+      "lv": 8,
+      "name": "精锐矛兵"
+    },
+    "20900": {
+      "soldier_type": 2,
+      "lv": 9,
+      "name": "荣耀矛兵"
+    },
+    "21000": {
+      "soldier_type": 2,
+      "lv": 10,
+      "name": "王牌矛兵"
+    },
+    "21100": {
+      "soldier_type": 2,
+      "lv": 11,
+      "name": "烈日矛兵"
+    },
+    "21200": {
+      "soldier_type": 2,
+      "lv": 12,
+      "name": "煌耀矛兵"
+    },
+    "30100": {
+      "soldier_type": 3,
+      "lv": 1,
+      "name": "见习射手"
+    },
+    "30200": {
+      "soldier_type": 3,
+      "lv": 2,
+      "name": "老练射手"
+    },
+    "30300": {
+      "soldier_type": 3,
+      "lv": 3,
+      "name": "资深射手"
+    },
+    "30400": {
+      "soldier_type": 3,
+      "lv": 4,
+      "name": "百战射手"
+    },
+    "30500": {
+      "soldier_type": 3,
+      "lv": 5,
+      "name": "刚毅射手"
+    },
+    "30600": {
+      "soldier_type": 3,
+      "lv": 6,
+      "name": "英勇射手"
+    },
+    "30700": {
+      "soldier_type": 3,
+      "lv": 7,
+      "name": "无畏射手"
+    },
+    "30800": {
+      "soldier_type": 3,
+      "lv": 8,
+      "name": "精锐射手"
+    },
+    "30900": {
+      "soldier_type": 3,
+      "lv": 9,
+      "name": "荣耀射手"
+    },
+    "31000": {
+      "soldier_type": 3,
+      "lv": 10,
+      "name": "王牌射手"
+    },
+    "31100": {
+      "soldier_type": 3,
+      "lv": 11,
+      "name": "烈日射手"
+    },
+    "31200": {
+      "soldier_type": 3,
+      "lv": 12,
+      "name": "煌耀射手"
+    }
+  },
+  "heroes": {
+    "50000": "尤金",
+    "50001": "史密斯",
+    "50002": "查理",
+    "50003": "克劳瑞斯",
+    "50004": "谢尔盖",
+    "50005": "帕特里克",
+    "50006": "巴希提",
+    "50007": "杰西",
+    "50008": "吉娜",
+    "50009": "娜塔莉亚",
+    "50010": "罗根",
+    "50011": "赫罗尼莫",
+    "50012": "茉莉",
+    "50013": "菲兰德",
+    "50014": "玲奈",
+    "50015": "哥顿",
+    "50016": "米娅",
+    "50017": "津曼",
+    "50018": "阿隆索",
+    "50019": "无名",
+    "50020": "格雷格",
+    "50021": "弗林特",
+    "50022": "琳恩",
+    "50023": "阿赫摩斯",
+    "50024": "赫克托",
+    "50025": "诺拉",
+    "50026": "格温",
+    "50027": "书允",
+    "50028": "杰塞尔",
+    "50029": "卢姆·波根",
+    "50030": "芮妮",
+    "50031": "韦恩",
+    "50032": "艾迪丝",
+    "50033": "布拉德利",
+    "50034": "加托",
+    "50035": "索尼娅",
+    "50036": "亨德里克",
+    "50037": "凌霜",
+    "50038": "马格努斯",
+    "50039": "弗雷德",
+    "50040": "修拉",
+    "50041": "格里高利",
+    "50042": "芙蕾雅",
+    "50043": "布兰琪",
+    "50044": "埃莱奥诺拉",
+    "50045": "劳埃德",
+    "50046": "鲁弗斯",
+    "50047": "赫尔薇尔",
+    "50048": "加罗尔",
+    "50049": "丽姬娅",
+    "50050": "吉塞拉",
+    "50051": "弗洛拉",
+    "50052": "乌尔卡努斯",
+    "50053": "艾丽芙",
+    "50054": "多米尼克",
+    "50055": "卡拉",
+    "50056": "汉克",
+    "50057": "艾丝黛拉",
+    "50058": "维薇卡",
+    "50059": "西格尔",
+    "50060": "乌尔撒",
+    "50061": "艾诗琳",
+    "50062": "艾丹",
+    "50063": "贝尔莎",
+    "50064": "埃莉诺",
+    "50065": "约顿",
+    "50066": "尼古拉",
+    "50067": "艾西娅"
+  },
+  "enums": {
+    "march_state": {
+      "preparing": 5,
+      "returnning": 4,
+      "idle": 1,
+      "finish": 0,
+      "working": 3,
+      "moving": 2
+    },
+    "march_type": {
+      "mass_boss": 102,
+      "collect_weapon_workshop": 605,
+      "brawl_war_recon_building": 1402,
+      "atk_alliance_hall": 12,
+      "zombie_atk_center": 701,
+      "recon_major_fort": 18,
+      "atk_arsenal_building": 601,
+      "atk_mercenary_alliance_monster": 504,
+      "mass_minor_fort": 105,
+      "recon_capital": 22,
+      "mass_tower": 109,
+      "atk_minor_fort": 13,
+      "atk_major_fort": 17,
+      "mass_middle_fort": 106,
+      "recon_weapon_workshop": 606,
+      "recon_alliance_flag": 9,
+      "atk_monster": 3,
+      "recon_resource": 8,
+      "recon_tower": 23,
+      "atk_alliance_flag": 10,
+      "mass_slave": 99,
+      "recon_minor_fort": 14,
+      "frostfire_war_burst_collect": 805,
+      "triangle_war": 1101,
+      "supremacy_war_atk_palace": 1301,
+      "supremacy_war_recon_guard": 1305,
+      "atk_world_boss": 25,
+      "supremacy_war_recon_palace": 1302,
+      "frostfire_war_pickup": 801,
+      "transaction_rescue": 301,
+      "supremacy_war_mass_guard": 1306,
+      "recon_alliance_hall": 11,
+      "atk_tower": 21,
+      "supremacy_war_collect_resource_1": 1307,
+      "mass_arsenal_building": 603,
+      "supremacy_war_collect_resource_2": 1309,
+      "supremacy_war_atk_guard": 1304,
+      "to_a_supremacy_banquet": 1002,
+      "build_trap": 19,
+      "mass_icefield_hunter_boss": 501,
+      "supremacy_war_atk_monster": 1311,
+      "brawl_war_atk_building": 1401,
+      "zombie_atk_building": 702,
+      "brawl_war_recon_resource": 1404,
+      "alliance_collect_resource": 110,
+      "brawl_war_take_airdrop": 1405,
+      "explore_fog": 9999,
+      "frostfire_war_atk_monster": 802,
+      "brawl_war_collect_resource": 1403,
+      "atk_monster_auto": 24,
+      "frostfire_war_burst_res_recon": 807,
+      "atk_camp": 6,
+      "mass_alliance_flag": 103,
+      "to_a_banquet": 1001,
+      "collect_resource": 4,
+      "monster_siege_atk_city": 401,
+      "mass_alliance_trap": 411,
+      "recon_city": 1,
+      "recon_camp": 7,
+      "mass_mercenary_player_monster": 503,
+      "pet_catch": 901,
+      "truck_escort": 1201,
+      "arsenal_war_take_crumb": 604,
+      "frostfire_war_center_recon": 808,
+      "atk_city": 2,
+      "mass_major_fort": 107,
+      "atk_capital": 20,
+      "monster_siege_atk_alliance_hall": 402,
+      "mass_capital": 108,
+      "supremacy_war_mass_palace": 1303,
+      "frostfire_war_res_recon": 806,
+      "mass_alliance_hall": 104,
+      "recon_arsenal_building": 602,
+      "frostfire_war_collect": 803,
+      "atk_mercenary_player_monster": 502,
+      "mass_city": 100,
+      "frostfire_war_atk_center": 804,
+      "atk_middle_fort": 15,
+      "supremacy_war_recon_resource_1": 1308,
+      "help_city": 5,
+      "transaction_slg": 302,
+      "recon_middle_fort": 16,
+      "supremacy_war_recon_resource_2": 1310
+    },
+    "mapobj_type": {
+      "map_arsenal_zombie_camp": 205,
+      "map_nest": 41,
+      "map_tower": 24,
+      "map_frostfire_resource": 301,
+      "map_supremacy_resource1": 504,
+      "map_alliance_arsenal": 37,
+      "map_alliance_trap": 33,
+      "map_alliance_feast_3": 44,
+      "map_triangle_center": 402,
+      "map_feast": 46,
+      "map_middle_fort": 22,
+      "map_alliance_resource": 39,
+      "map_alliance_mine": 35,
+      "map_capital": 20,
+      "map_dinner_table": 45,
+      "map_icefield_hunter_boss": 101,
+      "map_alliance_flag": 32,
+      "map_triangle_base": 401,
+      "map_arsenal_center": 201,
+      "map_monster": 3,
+      "map_alliance_bomb": 40,
+      "map_arsenal_factory": 203,
+      "map_arsenal_warehouse": 204,
+      "map_supremacy_dinner_table": 47,
+      "map_alliance_hall": 31,
+      "map_city": 1,
+      "map_arsenal_power_station": 207,
+      "map_arsenal_weapon_workshop": 208,
+      "map_alliance_base_war": 49,
+      "map_boss": 4,
+      "map_alliance_feast_1": 42,
+      "map_supremacy_guard": 502,
+      "map_frostfire_burst_res": 302,
+      "map_mercenary_player_monster": 102,
+      "map_frostfire_sub_res": 305,
+      "map_frostfire_monster": 304,
+      "map_major_fort": 21,
+      "map_alliance_showdown": 36,
+      "map_frostfire_center": 303,
+      "map_triangle_core": 403,
+      "map_camp": 5,
+      "map_arsenal_parking_apron": 206,
+      "map_world_boss": 105,
+      "map_triangle_city": 404,
+      "map_triangle_port": 405,
+      "map_brawl_building_1": 602,
+      "map_alliance_mobilization": 34,
+      "map_minor_fort": 23,
+      "map_alliance_arsenal_league": 48,
+      "map_supremacy_monster": 503,
+      "map_resource": 2,
+      "map_alliance_feast_2": 43,
+      "map_arsenal_war_crumb": 209,
+      "map_brawl_building": 601,
+      "map_supremacy_resource2": 505,
+      "map_supremacy_palace": 501,
+      "map_brawl_building_2": 603,
+      "map_brawl_building_3": 604,
+      "map_brawl_resource": 605,
+      "map_alliance_duel": 38,
+      "map_brawl_airdrop": 606,
+      "map_mercenary_alliance_monster": 103,
+      "map_arsenal_treatment_plant": 202
+    },
+    "triangle_state": {
+      "battling": 4,
+      "idle": 1,
+      "finish": 0,
+      "working": 3,
+      "moving": 2
+    }
+  }
+}

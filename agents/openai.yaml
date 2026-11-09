@@ -1,4 +1,4 @@
 interface:
   display_name: "无尽冬日桌面助手"
-  short_description: "按详细方案实现登录、自动移民、高迁与首占，包含协议定位、时间调度及少量参考片段"
-  default_prompt: "请使用 $wjdr-desktop-rebuild，检查当前工程和客户端资料，按最小方案分阶段实现登录、自动移民、高迁、出征与连续加速。"
+  short_description: "按基线算法、协议字段和确定行为实现登录、移民、高迁与首占，减少重复分析"
+  default_prompt: "请使用 $wjdr-desktop-rebuild，先读取基线规格和字段字典，最小化实现正常登录、自动移民、高迁、出征与连续加速。只对客户端差异重新分析，按用户要求执行或跳过运行。"

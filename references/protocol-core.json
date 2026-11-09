@@ -1,0 +1,631 @@
+{
+  "format_version": 1,
+  "baseline": "CN Android 1.16.11 / baidu_cn",
+  "scope": "login and normal-map task subset",
+  "note": "字段摘录，不是完整游戏协议；omitted_fields 是主动省略字段。接收端跳过未声明字段，发送只使用本文规定子集。",
+  "messages": {
+    "loginauth": {"id":1,"request":"loginauth.request","response":"loginauth.response","direction":"c2s"},
+    "req_loaddata": {"id":21,"response":"req_loaddata.response","direction":"c2s"},
+    "req_heartbeat": {"id":22,"response":"req_heartbeat.response","direction":"c2s"},
+    "notify_server_time": {"id":32,"request":"notify_server_time.request","direction":"s2c"},
+    "notify_game_init": {"id":33,"request":"notify_game_init.request","direction":"s2c"},
+    "notify_backpack_init": {"id":1101,"request":"notify_backpack_init.request","direction":"s2c"},
+    "notify_backpack_update": {"id":1102,"request":"notify_backpack_update.request","direction":"s2c"},
+    "notify_resource_init": {"id":1301,"request":"notify_resource_init.request","direction":"s2c"},
+    "notify_resource_update": {"id":1302,"request":"notify_resource_update.request","direction":"s2c"},
+    "notify_hero_init": {"id":1801,"request":"notify_hero_init.request","direction":"s2c"},
+    "notify_hero_update": {"id":1802,"request":"notify_hero_update.request","direction":"s2c"},
+    "req_shop_quick_buy": {"id":2001,"request":"req_shop_quick_buy.request","response":"req_shop_quick_buy.response","direction":"c2s"},
+    "req_role_list": {"id":3602,"response":"req_role_list.response","direction":"c2s"},
+    "notify_soldier_init": {"id":4001,"request":"notify_soldier_init.request","direction":"s2c"},
+    "notify_soldier_update": {"id":4002,"request":"notify_soldier_update.request","direction":"s2c"},
+    "req_world_map_info": {"id":5601,"request":"req_world_map_info.request","response":"req_world_map_info.response","direction":"c2s"},
+    "req_world_move_city": {"id":5604,"request":"req_world_move_city.request","response":"req_world_move_city.response","direction":"c2s"},
+    "req_world_mapobj": {"id":5617,"request":"req_world_mapobj.request","response":"req_world_mapobj.response","direction":"c2s"},
+    "req_world_wormhole_jumping_to_point": {"id":5632,"request":"req_world_wormhole_jumping_to_point.request","response":"req_world_wormhole_jumping_to_point.response","direction":"c2s"},
+    "req_world_gohome_to_point": {"id":5633,"request":"req_world_gohome_to_point.request","response":"req_world_gohome_to_point.response","direction":"c2s"},
+    "notify_world_player_init": {"id":5651,"request":"notify_world_player_init.request","direction":"s2c"},
+    "notify_world_mapobjs": {"id":5652,"request":"notify_world_mapobjs.request","direction":"s2c"},
+    "notify_player_city_update": {"id":5656,"request":"notify_player_city_update.request","direction":"s2c"},
+    "notify_world_player_jump_info": {"id":5673,"request":"notify_world_player_jump_info.request","direction":"s2c"},
+    "req_world_march": {"id":5701,"request":"req_world_march.request","response":"req_world_march.response","direction":"c2s"},
+    "req_world_march_speedup": {"id":5703,"request":"req_world_march_speedup.request","response":"req_world_march_speedup.response","direction":"c2s"},
+    "notify_world_marchs": {"id":5751,"request":"notify_world_marchs.request","direction":"s2c"},
+    "notify_world_march_add": {"id":5752,"request":"notify_world_march_add.request","direction":"s2c"},
+    "notify_world_march_update": {"id":5753,"request":"notify_world_march_update.request","direction":"s2c"},
+    "notify_world_march_del": {"id":5754,"request":"notify_world_march_del.request","direction":"s2c"},
+    "notify_player_march_add": {"id":5755,"request":"notify_player_march_add.request","direction":"s2c"},
+    "notify_player_march_update": {"id":5756,"request":"notify_player_march_update.request","direction":"s2c"},
+    "notify_player_march_del": {"id":5757,"request":"notify_player_march_del.request","direction":"s2c"},
+    "req_migrant_get_kingdom_list": {"id":15852,"request":"req_migrant_get_kingdom_list.request","response":"req_migrant_get_kingdom_list.response","direction":"c2s"},
+    "req_migrant_get_kingdom_info": {"id":15853,"request":"req_migrant_get_kingdom_info.request","response":"req_migrant_get_kingdom_info.response","direction":"c2s"},
+    "req_migrant_migrate": {"id":15858,"request":"req_migrant_migrate.request","response":"req_migrant_migrate.response","direction":"c2s"},
+    "notify_migrant_init": {"id":15881,"request":"notify_migrant_init.request","direction":"s2c"}
+  },
+  "types": {
+    "formation_build": [
+      {"name":"hero_id","tag":0,"type":"pair_int_int","array":true,"arg":""},
+      {"name":"soldier","tag":1,"type":"pair_int_int","array":true,"arg":""}
+    ],
+    "hero": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"lev","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"star","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"elv","tag":7,"type":"integer","array":false,"arg":null},
+      {"name":"training_lev","tag":8,"type":"integer","array":false,"arg":null}
+    ],
+    "item_long": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"count","tag":1,"type":"integer","array":false,"arg":"0"}
+    ],
+    "loginauth.request": [
+      {"name":"sdkToken","tag":0,"type":"string","array":false,"arg":null},
+      {"name":"account","tag":1,"type":"string","array":false,"arg":null},
+      {"name":"serverid","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"version","tag":3,"type":"string","array":false,"arg":null},
+      {"name":"uid","tag":4,"type":"integer","array":false,"arg":null},
+      {"name":"is_create","tag":5,"type":"boolean","array":false,"arg":null},
+      {"name":"group","tag":6,"type":"integer","array":false,"arg":null},
+      {"name":"device","tag":7,"type":"string","array":false,"arg":null},
+      {"name":"device_os","tag":8,"type":"string","array":false,"arg":null},
+      {"name":"ip","tag":9,"type":"string","array":false,"arg":null},
+      {"name":"country_code","tag":10,"type":"string","array":false,"arg":null},
+      {"name":"distinct_id","tag":11,"type":"string","array":false,"arg":null},
+      {"name":"lan","tag":13,"type":"string","array":false,"arg":null},
+      {"name":"package_tag","tag":18,"type":"string","array":false,"arg":null},
+      {"name":"ts","tag":19,"type":"integer","array":false,"arg":"0"},
+      {"name":"sign","tag":20,"type":"string","array":false,"arg":null},
+      {"name":"ad_source","tag":22,"type":"string","array":false,"arg":null},
+      {"name":"device_id","tag":23,"type":"string","array":false,"arg":null}
+    ],
+    "loginauth.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"serverid","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"uid","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"role_list","tag":6,"type":"role_info","array":true,"arg":null},
+      {"name":"server_ts","tag":13,"type":"integer","array":false,"arg":null},
+      {"name":"secret_key","tag":14,"type":"binary","array":false,"arg":null},
+      {"name":"crypt_method","tag":16,"type":"integer","array":false,"arg":null}
+    ],
+    "migrant_act_info": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"start_ts","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"end_ts","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"serial_no","tag":3,"type":"integer","array":false,"arg":null}
+    ],
+    "migrant_info": [
+      {"name":"act_info","tag":0,"type":"migrant_act_info","array":false,"arg":null},
+      {"name":"power_limit","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"standard_points","tag":3,"type":"integer","array":false,"arg":"0"},
+      {"name":"personal_points","tag":4,"type":"integer","array":false,"arg":"0"},
+      {"name":"state","tag":7,"type":"integer","array":false,"arg":null},
+      {"name":"gid","tag":8,"type":"integer","array":false,"arg":null},
+      {"name":"last_migrant_ts","tag":9,"type":"integer","array":false,"arg":null},
+      {"name":"kid_set","tag":11,"type":"pair_int_int","array":true,"arg":""}
+    ],
+    "migrant_kingdom_info": [
+      {"name":"kid","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"state","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"migrant_num","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"normal_migrant_num","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"special_invite_count","tag":4,"type":"integer","array":false,"arg":null},
+      {"name":"power_limit","tag":5,"type":"integer","array":false,"arg":null},
+      {"name":"language","tag":6,"type":"integer","array":false,"arg":null},
+      {"name":"flag","tag":7,"type":"integer","array":false,"arg":null},
+      {"name":"name","tag":8,"type":"string","array":false,"arg":null},
+      {"name":"president","tag":9,"type":"integer","array":false,"arg":null},
+      {"name":"aid","tag":10,"type":"integer","array":false,"arg":"0"},
+      {"name":"super_count","tag":11,"type":"integer","array":false,"arg":null},
+      {"name":"conti_super_count","tag":12,"type":"integer","array":false,"arg":null},
+      {"name":"super_special_invite_count","tag":13,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_backpack_init.request": [
+      {"name":"data","tag":0,"type":"item_long","array":true,"arg":null}
+    ],
+    "notify_backpack_update.request": [
+      {"name":"type","tag":0,"type":"string","array":false,"arg":null},
+      {"name":"data","tag":1,"type":"item_long","array":true,"arg":null}
+    ],
+    "notify_game_init.request": [
+      {"name":"project_start_ts","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"servertime","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"utc_offset","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"open_time","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"zero_time","tag":4,"type":"integer","array":false,"arg":null},
+      {"name":"logout_ts","tag":5,"type":"integer","array":false,"arg":null},
+      {"name":"secret_key","tag":7,"type":"binary","array":false,"arg":null}
+    ],
+    "notify_hero_init.request": [
+      {"name":"data","tag":0,"type":"hero","array":true,"arg":"id"}
+    ],
+    "notify_hero_update.request": [
+      {"name":"data","tag":0,"type":"hero","array":false,"arg":null},
+      {"name":"fragment_num","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_migrant_init.request": [
+      {"name":"info","tag":0,"type":"migrant_info","array":false,"arg":null}
+    ],
+    "notify_player_city_update.request": [
+      {"name":"point","tag":0,"type":"point","array":false,"arg":null},
+      {"name":"be_atk","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"burn_down","tag":2,"type":"boolean","array":false,"arg":null}
+    ],
+    "notify_player_march_add.request": [
+      {"name":"march","tag":0,"type":"world_march","array":false,"arg":null},
+      {"name":"kid","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_player_march_del.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"ret_code","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"kid","tag":4,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_player_march_update.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"change","tag":2,"type":"world_march","array":false,"arg":null},
+      {"name":"ret_code","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"del","tag":4,"type":"world_march_del_keys","array":false,"arg":null},
+      {"name":"kid","tag":5,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_resource_init.request": [
+      {"name":"data","tag":0,"type":"item_long","array":true,"arg":null}
+    ],
+    "notify_resource_update.request": [
+      {"name":"type","tag":0,"type":"string","array":false,"arg":null},
+      {"name":"data","tag":1,"type":"item_long","array":true,"arg":null}
+    ],
+    "notify_server_time.request": [
+      {"name":"time","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_soldier_init.request": [
+      {"name":"soldier","tag":1,"type":"item_long","array":true,"arg":""}
+    ],
+    "notify_soldier_update.request": [
+      {"name":"type","tag":0,"type":"string","array":false,"arg":null},
+      {"name":"data","tag":1,"type":"item_long","array":true,"arg":null}
+    ],
+    "notify_world_mapobjs.request": [
+      {"name":"session","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"datalist","tag":1,"type":"world_mapobj","array":true,"arg":null},
+      {"name":"end_flag","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"kid","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"lod","tag":4,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_world_march_add.request": [
+      {"name":"march","tag":0,"type":"world_march","array":false,"arg":null},
+      {"name":"kid","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_world_march_del.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"kid","tag":3,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_world_march_update.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"change","tag":3,"type":"world_march","array":false,"arg":null},
+      {"name":"kid","tag":4,"type":"integer","array":false,"arg":null},
+      {"name":"del","tag":5,"type":"world_march_del_keys","array":false,"arg":null}
+    ],
+    "notify_world_marchs.request": [
+      {"name":"session","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"datalist","tag":1,"type":"world_march","array":true,"arg":null},
+      {"name":"end_flag","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"kid","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"dellist","tag":4,"type":"world_march","array":true,"arg":null}
+    ],
+    "notify_world_player_init.request": [
+      {"name":"city_point","tag":0,"type":"point","array":false,"arg":null},
+      {"name":"march_info","tag":1,"type":"world_march","array":true,"arg":null},
+      {"name":"jump_kid","tag":9,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_world_player_jump_info.request": [
+      {"name":"city_point","tag":0,"type":"point","array":false,"arg":null},
+      {"name":"jump_kid","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "pair_int_int": [
+      {"name":"k","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"v","tag":1,"type":"integer","array":false,"arg":"0"}
+    ],
+    "point": [
+      {"name":"x","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"y","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_heartbeat.response": [
+      {"name":"time","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_loaddata.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "req_migrant_get_kingdom_info.request": [
+      {"name":"kid","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "req_migrant_get_kingdom_info.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"info","tag":1,"type":"migrant_kingdom_info","array":false,"arg":null}
+    ],
+    "req_migrant_get_kingdom_list.request": [
+
+    ],
+    "req_migrant_get_kingdom_list.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"list","tag":1,"type":"migrant_kingdom_info","array":true,"arg":"kid"}
+    ],
+    "req_migrant_migrate.request": [
+      {"name":"kid","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "req_migrant_migrate.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "req_role_list.response": [
+      {"name":"list","tag":0,"type":"role_info","array":true,"arg":null},
+      {"name":"code","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"star_kid","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"is_white_list_account","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"block_create_role_endtime","tag":4,"type":"integer","array":false,"arg":"0"}
+    ],
+    "req_shop_quick_buy.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"count","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"use","tag":2,"type":"boolean","array":false,"arg":null}
+    ],
+    "req_shop_quick_buy.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "req_world_gohome_to_point.request": [
+      {"name":"point","tag":0,"type":"point","array":false,"arg":null}
+    ],
+    "req_world_gohome_to_point.response": [
+      {"name":"code","tag":3,"type":"integer","array":false,"arg":null}
+    ],
+    "req_world_map_info.request": [
+      {"name":"args","tag":0,"type":"world_map_info_args","array":true,"arg":null},
+      {"name":"session","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"fulldata","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"lod","tag":3,"type":"integer","array":false,"arg":null}
+    ],
+    "req_world_map_info.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "req_world_mapobj.request": [
+      {"name":"kid","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"point","tag":1,"type":"point","array":false,"arg":null}
+    ],
+    "req_world_mapobj.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"mapobj","tag":1,"type":"world_mapobj","array":false,"arg":null}
+    ],
+    "req_world_march.request": [
+      {"name":"type","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"endpoint","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"formation","tag":2,"type":"formation_build","array":false,"arg":null},
+      {"name":"extra","tag":3,"type":"req_world_march.request.extra","array":false,"arg":null}
+    ],
+    "req_world_march.request.extra": [
+      {"name":"monsterid","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"prepare_time_index","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"master_marchid","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"event_id","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"param1","tag":4,"type":"integer","array":false,"arg":"0"},
+      {"name":"param2","tag":5,"type":"integer","array":false,"arg":null},
+      {"name":"dinner_table_id","tag":6,"type":"integer","array":false,"arg":"0"},
+      {"name":"dinner_act_id","tag":7,"type":"integer","array":false,"arg":null},
+      {"name":"act_id","tag":8,"type":"integer","array":false,"arg":null}
+    ],
+    "req_world_march.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"march_info","tag":1,"type":"world_march","array":false,"arg":null}
+    ],
+    "req_world_march_speedup.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"itemid","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":2,"type":"integer","array":false,"arg":null}
+    ],
+    "req_world_march_speedup.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_world_move_city.request": [
+      {"name":"point","tag":0,"type":"point","array":false,"arg":null}
+    ],
+    "req_world_move_city.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"point","tag":1,"type":"point","array":false,"arg":null}
+    ],
+    "req_world_wormhole_jumping_to_point.request": [
+      {"name":"kid","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"point","tag":1,"type":"point","array":false,"arg":null}
+    ],
+    "req_world_wormhole_jumping_to_point.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "role_info": [
+      {"name":"abbr","tag":0,"type":"string","array":false,"arg":null},
+      {"name":"name","tag":1,"type":"string","array":false,"arg":null},
+      {"name":"stove_lv","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"kid","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"uid","tag":4,"type":"integer","array":false,"arg":null},
+      {"name":"register_time","tag":5,"type":"integer","array":false,"arg":null},
+      {"name":"power","tag":6,"type":"integer","array":false,"arg":"0"},
+      {"name":"image","tag":7,"type":"integer","array":false,"arg":null},
+      {"name":"lan","tag":8,"type":"string","array":false,"arg":null},
+      {"name":"block_endtime","tag":9,"type":"integer","array":false,"arg":null},
+      {"name":"block_reason","tag":10,"type":"integer","array":false,"arg":null},
+      {"name":"total_recharge_amount","tag":11,"type":"integer","array":false,"arg":null},
+      {"name":"delete_end_time","tag":12,"type":"integer","array":false,"arg":null}
+    ],
+    "world_map_info_args": [
+      {"name":"startpoint","tag":0,"type":"point","array":false,"arg":null},
+      {"name":"endpoint","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"kid","tag":2,"type":"integer","array":false,"arg":null}
+    ],
+    "world_mapobj": [
+      {"name":"point","tag":0,"type":"point","array":false,"arg":null},
+      {"name":"type","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"map_monster","tag":4,"type":"world_mapobj.map_monster","array":false,"arg":null},
+      {"name":"id","tag":45,"type":"integer","array":false,"arg":null}
+    ],
+    "world_mapobj.map_monster": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"atk_point","tag":1,"type":"point","array":false,"arg":null}
+    ],
+    "world_march": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"startpoint","tag":2,"type":"point","array":false,"arg":null},
+      {"name":"endpoint","tag":3,"type":"point","array":false,"arg":null},
+      {"name":"starttime","tag":6,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":7,"type":"integer","array":false,"arg":null},
+      {"name":"state","tag":9,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":10,"type":"integer","array":false,"arg":null},
+      {"name":"formationid","tag":14,"type":"integer","array":false,"arg":null},
+      {"name":"kid","tag":67,"type":"integer","array":false,"arg":null},
+      {"name":"world_kid","tag":68,"type":"integer","array":false,"arg":null}
+    ],
+    "world_march_del_keys": [
+
+    ]
+  },
+  "omitted_fields": {
+    "migrant_info": [
+      "president",
+      "president_data",
+      "civilian_data",
+      "aid",
+      "room_id",
+      "transfer_data",
+      "cw_lose",
+      "super_count",
+      "conti_super_count"
+    ],
+    "world_march_del_keys": [
+      "mass_city",
+      "mass_boss",
+      "mass_icefield_hunter_boss",
+      "mass_minor_fort",
+      "mass_middle_fort",
+      "mass_major_fort",
+      "mass_alliance_flag",
+      "mass_alliance_hall",
+      "mass_alliance_trap",
+      "mass_capital",
+      "mass_tower",
+      "mass_arsenal_building",
+      "aid"
+    ],
+    "world_march": [
+      "move_startpoint",
+      "move_endpoint",
+      "move_split_segment",
+      "recon_city",
+      "atk_city",
+      "squad_list",
+      "target_type",
+      "aid",
+      "battletime",
+      "mass_city",
+      "mass_slave",
+      "mass_boss",
+      "atk_camp",
+      "mass_minor_fort",
+      "recon_camp",
+      "recon_resource",
+      "recon_minor_fort",
+      "battleresult",
+      "atk_minor_fort",
+      "supplement_fort",
+      "equiped_skin",
+      "collect_resource",
+      "def_battletime",
+      "atk_middle_fort",
+      "recon_middle_fort",
+      "mass_middle_fort",
+      "atk_major_fort",
+      "recon_major_fort",
+      "mass_major_fort",
+      "atk_monster",
+      "help_city",
+      "mass_icefield_hunter_boss",
+      "monster_siege_atk_city",
+      "recon_alliance_flag",
+      "recon_alliance_hall",
+      "atk_alliance_flag",
+      "atk_alliance_hall",
+      "mass_alliance_flag",
+      "mass_alliance_hall",
+      "mass_alliance_trap",
+      "monster_siege_atk_alliance_hall",
+      "transaction_slg",
+      "build_trap",
+      "atk_capital",
+      "mass_capital",
+      "recon_capital",
+      "atk_tower",
+      "mass_tower",
+      "recon_tower",
+      "atk_arsenal_building",
+      "mass_arsenal_building",
+      "recon_arsenal_building",
+      "collect_weapon_workshop",
+      "recon_weapon_workshop",
+      "zombie_atk_building",
+      "atk_mercenary_player_monster",
+      "mass_mercenary_player_monster",
+      "atk_mercenary_alliance_monster",
+      "atk_monster_auto",
+      "frostfire_war_atk_monster",
+      "frostfire_war_collect",
+      "frostfire_war_burst_collect",
+      "frostfire_war_atk_center",
+      "map_expression",
+      "pet_catch",
+      "to_a_banquet",
+      "truck_escort",
+      "supremacy_war_atk_guard",
+      "supremacy_war_mass_guard",
+      "supremacy_war_recon_guard",
+      "supremacy_war_atk_palace",
+      "supremacy_war_mass_palace",
+      "supremacy_war_recon_palace",
+      "to_a_supremacy_banquet",
+      "alliance_collect_resource",
+      "atk_world_boss",
+      "supremacy_war_collect_resource_1",
+      "supremacy_war_recon_resource_1",
+      "supremacy_war_collect_resource_2",
+      "supremacy_war_recon_resource_2",
+      "supremacy_war_atk_monster",
+      "side",
+      "brawl_war_collect_resource",
+      "brawl_war_atk_building",
+      "brawl_war_recon_building",
+      "brawl_war_recon_resource",
+      "segment_x_aoi"
+    ],
+    "world_mapobj": [
+      "map_city",
+      "map_resource",
+      "map_camp",
+      "map_minor_fort",
+      "map_boss",
+      "map_middle_fort",
+      "map_major_fort",
+      "map_alliance_hall",
+      "map_alliance_flag",
+      "map_alliance_trap",
+      "map_nest",
+      "map_icefield_hunter_boss",
+      "map_alliance_mine",
+      "map_alliance_mobilization",
+      "map_capital",
+      "map_tower",
+      "map_alliance_showdown",
+      "map_mercenary_player_monster",
+      "map_mercenary_alliance_monster",
+      "map_arsenal_center",
+      "map_arsenal_treatment_plant",
+      "map_arsenal_factory",
+      "map_arsenal_warehouse",
+      "map_arsenal_zombie_camp",
+      "map_arsenal_parking_apron",
+      "map_arsenal_power_station",
+      "map_arsenal_weapon_workshop",
+      "map_arsenal_war_crumb",
+      "map_alliance_arsenal",
+      "map_frostfire_resource",
+      "map_frostfire_burst_res",
+      "map_frostfire_center",
+      "map_frostfire_monster",
+      "map_frostfire_sub_res",
+      "map_expression",
+      "map_dinner_table",
+      "map_alliance_feast",
+      "map_triangle_base",
+      "map_triangle_center",
+      "map_triangle_core",
+      "map_triangle_city",
+      "map_triangle_port",
+      "map_alliance_duel",
+      "map_supremacy_guard",
+      "map_supremacy_palace",
+      "map_feast",
+      "map_supremacy_dinner_table",
+      "map_alliance_resource",
+      "map_world_boss",
+      "map_supremacy_resource1",
+      "map_supremacy_resource2",
+      "map_supremacy_monster",
+      "map_alliance_arsenal_league",
+      "map_brawl_airdrop",
+      "map_brawl_resource",
+      "map_brawl_building",
+      "map_alliance_base_war"
+    ],
+    "world_mapobj.map_monster": [
+      "win",
+      "time",
+      "pet_owner",
+      "catch_time",
+      "bomb_time"
+    ],
+    "notify_world_player_init.request": [
+      "mass_master_marchs",
+      "kingdom_count",
+      "world_extra_march",
+      "is_respawned",
+      "war_ban_endtime",
+      "last_jump_time",
+      "jump_free_count",
+      "free_reset_season",
+      "merge_map"
+    ],
+    "notify_soldier_init.request": [
+      "formation",
+      "prefab",
+      "auto_join_prefab"
+    ],
+    "req_shop_quick_buy.response": [
+      "result"
+    ],
+    "req_shop_quick_buy.request": [
+      "extra"
+    ],
+    "hero": [
+      "skills",
+      "recruit_ts",
+      "hint"
+    ],
+    "notify_game_init.request": [
+      "pre_merge_kingdom"
+    ],
+    "loginauth.response": [
+      "block_endtime",
+      "is_new",
+      "is_first_role",
+      "server_list",
+      "del_account_ts",
+      "version_info",
+      "block_reason",
+      "block_create_role_endtime",
+      "show_privacy_policy",
+      "first_role_ts",
+      "is_create_by_old_role",
+      "inner_permissions"
+    ],
+    "loginauth.request": [
+      "origin_serverid",
+      "is_simulator",
+      "source_player_info",
+      "operator_type",
+      "h5_device_type",
+      "scene_value",
+      "dy_content_id",
+      "inner_permission_account",
+      "inner_permission_token",
+      "device_lv"
+    ]
+  }
+}

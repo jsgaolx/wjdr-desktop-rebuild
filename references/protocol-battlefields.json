@@ -1,0 +1,1050 @@
+{
+  "format_version": 1,
+  "baseline": "CN Android 1.16.11 / baidu_cn",
+  "scope": "battlefield adapter subset",
+  "note": "字段摘录，不是完整游戏协议；omitted_fields 是主动省略字段。接收端跳过未声明字段，发送只使用本文规定子集。",
+  "messages": {
+    "req_arsenal_war_enter_battlefield": {"id":11101,"response":"req_arsenal_war_enter_battlefield.response","direction":"c2s"},
+    "req_arsenal_war_march": {"id":11103,"request":"req_arsenal_war_march.request","response":"req_arsenal_war_march.response","direction":"c2s"},
+    "req_arsenal_war_march_speedup": {"id":11104,"request":"req_arsenal_war_march_speedup.request","response":"req_arsenal_war_march_speedup.response","direction":"c2s"},
+    "req_arsenal_war_battlefield_map_info": {"id":11118,"response":"req_arsenal_war_battlefield_map_info.response","direction":"c2s"},
+    "notify_arsenal_war_march_add": {"id":11156,"request":"notify_arsenal_war_march_add.request","direction":"s2c"},
+    "notify_arsenal_war_march_update": {"id":11157,"request":"notify_arsenal_war_march_update.request","direction":"s2c"},
+    "notify_arsenal_war_march_del": {"id":11158,"request":"notify_arsenal_war_march_del.request","direction":"s2c"},
+    "notify_arsenal_war_battlefield_result": {"id":11166,"request":"notify_arsenal_war_battlefield_result.request","direction":"s2c"},
+    "req_frostfire_war_enter_warzone": {"id":13301,"response":"req_frostfire_war_enter_warzone.response","direction":"c2s"},
+    "req_frostfire_war_map_info": {"id":13302,"request":"req_frostfire_war_map_info.request","response":"req_frostfire_war_map_info.response","direction":"c2s"},
+    "req_frostfire_war_march": {"id":13305,"request":"req_frostfire_war_march.request","response":"req_frostfire_war_march.response","direction":"c2s"},
+    "req_frostfire_war_march_speedup": {"id":13309,"request":"req_frostfire_war_march_speedup.request","response":"req_frostfire_war_march_speedup.response","direction":"c2s"},
+    "notify_frostfire_war_mapobjs": {"id":13352,"request":"notify_frostfire_war_mapobjs.request","direction":"s2c"},
+    "notify_frostfire_war_marchs": {"id":13357,"request":"notify_frostfire_war_marchs.request","direction":"s2c"},
+    "notify_frostfire_war_march_add": {"id":13358,"request":"notify_frostfire_war_march_add.request","direction":"s2c"},
+    "notify_frostfire_war_march_update": {"id":13359,"request":"notify_frostfire_war_march_update.request","direction":"s2c"},
+    "notify_frostfire_war_march_del": {"id":13360,"request":"notify_frostfire_war_march_del.request","direction":"s2c"},
+    "notify_frostfire_war_self_march_add": {"id":13371,"request":"notify_frostfire_war_self_march_add.request","direction":"s2c"},
+    "notify_frostfire_war_self_march_update": {"id":13372,"request":"notify_frostfire_war_self_march_update.request","direction":"s2c"},
+    "notify_frostfire_war_self_march_del": {"id":13373,"request":"notify_frostfire_war_self_march_del.request","direction":"s2c"},
+    "notify_frostfire_war_warzone_result": {"id":13375,"request":"notify_frostfire_war_warzone_result.request","direction":"s2c"},
+    "req_triangle_war_enter_warzone": {"id":15981,"response":"req_triangle_war_enter_warzone.response","direction":"c2s"},
+    "req_triangle_war_map_info": {"id":15982,"request":"req_triangle_war_map_info.request","response":"req_triangle_war_map_info.response","direction":"c2s"},
+    "req_triangle_war_march_move": {"id":15985,"request":"req_triangle_war_march_move.request","response":"req_triangle_war_march_move.response","direction":"c2s"},
+    "req_triangle_war_march_speedup": {"id":15987,"request":"req_triangle_war_march_speedup.request","response":"req_triangle_war_march_speedup.response","direction":"c2s"},
+    "notify_triangle_war_mapobjs": {"id":16021,"request":"notify_triangle_war_mapobjs.request","direction":"s2c"},
+    "notify_triangle_war_marchs": {"id":16022,"request":"notify_triangle_war_marchs.request","direction":"s2c"},
+    "notify_triangle_war_march_add": {"id":16024,"request":"notify_triangle_war_march_add.request","direction":"s2c"},
+    "notify_triangle_war_march_update": {"id":16025,"request":"notify_triangle_war_march_update.request","direction":"s2c"},
+    "notify_triangle_war_march_del": {"id":16026,"request":"notify_triangle_war_march_del.request","direction":"s2c"},
+    "notify_triangle_war_map_update": {"id":16027,"request":"notify_triangle_war_map_update.request","direction":"s2c"},
+    "notify_triangle_war_warzone_result": {"id":16028,"request":"notify_triangle_war_warzone_result.request","direction":"s2c"},
+    "notify_triangle_war_player_quit": {"id":16032,"request":"notify_triangle_war_player_quit.request","direction":"s2c"},
+    "req_supremacy_war_enter": {"id":16601,"response":"req_supremacy_war_enter.response","direction":"c2s"},
+    "req_supremacy_war_march": {"id":16603,"request":"req_supremacy_war_march.request","response":"req_supremacy_war_march.response","direction":"c2s"},
+    "req_supremacy_war_march_speedup": {"id":16605,"request":"req_supremacy_war_march_speedup.request","response":"req_supremacy_war_march_speedup.response","direction":"c2s"},
+    "req_supremacy_war_map_info": {"id":16622,"request":"req_supremacy_war_map_info.request","response":"req_supremacy_war_map_info.response","direction":"c2s"},
+    "notify_supremacy_war_mapobjs": {"id":16651,"request":"notify_supremacy_war_mapobjs.request","direction":"s2c"},
+    "notify_supremacy_war_marchs": {"id":16662,"request":"notify_supremacy_war_marchs.request","direction":"s2c"},
+    "notify_supremacy_war_march_add": {"id":16663,"request":"notify_supremacy_war_march_add.request","direction":"s2c"},
+    "notify_supremacy_war_march_update": {"id":16664,"request":"notify_supremacy_war_march_update.request","direction":"s2c"},
+    "notify_supremacy_war_march_del": {"id":16665,"request":"notify_supremacy_war_march_del.request","direction":"s2c"},
+    "notify_supremacy_war_help_march_update": {"id":16666,"request":"notify_supremacy_war_help_march_update.request","direction":"s2c"},
+    "notify_supremacy_war_mass_march_add": {"id":16667,"request":"notify_supremacy_war_mass_march_add.request","direction":"s2c"},
+    "notify_supremacy_war_mass_march_update": {"id":16668,"request":"notify_supremacy_war_mass_march_update.request","direction":"s2c"},
+    "notify_supremacy_war_mass_march_del": {"id":16669,"request":"notify_supremacy_war_mass_march_del.request","direction":"s2c"},
+    "notify_supremacy_war_player_march_add": {"id":16670,"request":"notify_supremacy_war_player_march_add.request","direction":"s2c"},
+    "notify_supremacy_war_player_march_update": {"id":16671,"request":"notify_supremacy_war_player_march_update.request","direction":"s2c"},
+    "notify_supremacy_war_player_march_del": {"id":16672,"request":"notify_supremacy_war_player_march_del.request","direction":"s2c"},
+    "notify_supremacy_war_alliance_exit": {"id":16694,"request":"notify_supremacy_war_alliance_exit.request","direction":"s2c"},
+    "req_arsenal_league_enter_battlefield": {"id":17201,"response":"req_arsenal_league_enter_battlefield.response","direction":"c2s"},
+    "req_arsenal_league_march": {"id":17203,"request":"req_arsenal_league_march.request","response":"req_arsenal_league_march.response","direction":"c2s"},
+    "req_arsenal_league_march_speedup": {"id":17204,"request":"req_arsenal_league_march_speedup.request","response":"req_arsenal_league_march_speedup.response","direction":"c2s"},
+    "req_arsenal_league_battlefield_map_info": {"id":17217,"response":"req_arsenal_league_battlefield_map_info.response","direction":"c2s"},
+    "notify_arsenal_league_march_add": {"id":17255,"request":"notify_arsenal_league_march_add.request","direction":"s2c"},
+    "notify_arsenal_league_march_update": {"id":17256,"request":"notify_arsenal_league_march_update.request","direction":"s2c"},
+    "notify_arsenal_league_march_del": {"id":17257,"request":"notify_arsenal_league_march_del.request","direction":"s2c"},
+    "notify_arsenal_league_battlefield_result": {"id":17263,"request":"notify_arsenal_league_battlefield_result.request","direction":"s2c"},
+    "notify_arsenal_league_battlefield_map_init_info": {"id":17272,"request":"notify_arsenal_league_battlefield_map_init_info.request","direction":"s2c"},
+    "req_brawl_war_enter_battlefield": {"id":17431,"response":"req_brawl_war_enter_battlefield.response","direction":"c2s"},
+    "req_brawl_war_battlefield_map_info": {"id":17432,"response":"req_brawl_war_battlefield_map_info.response","direction":"c2s"},
+    "req_brawl_war_march": {"id":17434,"request":"req_brawl_war_march.request","response":"req_brawl_war_march.response","direction":"c2s"},
+    "req_brawl_war_march_speedup": {"id":17435,"request":"req_brawl_war_march_speedup.request","response":"req_brawl_war_march_speedup.response","direction":"c2s"},
+    "notify_brawl_war_march_add": {"id":17455,"request":"notify_brawl_war_march_add.request","direction":"s2c"},
+    "notify_brawl_war_march_update": {"id":17456,"request":"notify_brawl_war_march_update.request","direction":"s2c"},
+    "notify_brawl_war_march_del": {"id":17457,"request":"notify_brawl_war_march_del.request","direction":"s2c"},
+    "notify_brawl_war_battlefield_result": {"id":17459,"request":"notify_brawl_war_battlefield_result.request","direction":"s2c"},
+    "notify_brawl_war_battlefield_map_init_info": {"id":17461,"request":"notify_brawl_war_battlefield_map_init_info.request","direction":"s2c"}
+  },
+  "types": {
+    "formation_build": [
+      {"name":"hero_id","tag":0,"type":"pair_int_int","array":true,"arg":""},
+      {"name":"soldier","tag":1,"type":"pair_int_int","array":true,"arg":""}
+    ],
+    "notify_arsenal_league_battlefield_map_init_info.request": [
+      {"name":"objs","tag":0,"type":"world_mapobj","array":true,"arg":null},
+      {"name":"marchs","tag":1,"type":"world_march","array":true,"arg":null},
+      {"name":"send_begin","tag":4,"type":"boolean","array":false,"arg":null},
+      {"name":"send_end","tag":5,"type":"boolean","array":false,"arg":null}
+    ],
+    "notify_arsenal_league_battlefield_result.request": [
+
+    ],
+    "notify_arsenal_league_march_add.request": [
+      {"name":"march","tag":0,"type":"world_march","array":false,"arg":null},
+      {"name":"battlefield_id","tag":1,"type":"string","array":false,"arg":null}
+    ],
+    "notify_arsenal_league_march_del.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"battlefield_id","tag":3,"type":"string","array":false,"arg":null},
+      {"name":"ret_code","tag":4,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_arsenal_league_march_update.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"change","tag":3,"type":"world_march","array":false,"arg":null},
+      {"name":"del","tag":4,"type":"world_march_del_keys","array":false,"arg":null},
+      {"name":"battlefield_id","tag":5,"type":"string","array":false,"arg":null},
+      {"name":"ret_code","tag":6,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_arsenal_war_battlefield_result.request": [
+
+    ],
+    "notify_arsenal_war_march_add.request": [
+      {"name":"march","tag":0,"type":"world_march","array":false,"arg":null},
+      {"name":"battlefield_id","tag":1,"type":"string","array":false,"arg":null}
+    ],
+    "notify_arsenal_war_march_del.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"battlefield_id","tag":3,"type":"string","array":false,"arg":null},
+      {"name":"ret_code","tag":4,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_arsenal_war_march_update.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"change","tag":3,"type":"world_march","array":false,"arg":null},
+      {"name":"del","tag":4,"type":"world_march_del_keys","array":false,"arg":null},
+      {"name":"battlefield_id","tag":5,"type":"string","array":false,"arg":null},
+      {"name":"ret_code","tag":6,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_brawl_war_battlefield_map_init_info.request": [
+      {"name":"objs","tag":0,"type":"world_mapobj","array":true,"arg":null},
+      {"name":"marchs","tag":1,"type":"world_march","array":true,"arg":null}
+    ],
+    "notify_brawl_war_battlefield_result.request": [
+      {"name":"self_rank","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"match_mode","tag":4,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_brawl_war_march_add.request": [
+      {"name":"march","tag":0,"type":"world_march","array":false,"arg":null}
+    ],
+    "notify_brawl_war_march_del.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_brawl_war_march_update.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"change","tag":3,"type":"world_march","array":false,"arg":null},
+      {"name":"del","tag":4,"type":"world_march_del_keys","array":false,"arg":null}
+    ],
+    "notify_frostfire_war_mapobjs.request": [
+      {"name":"session","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"datalist","tag":1,"type":"world_mapobj","array":true,"arg":null},
+      {"name":"end_flag","tag":2,"type":"boolean","array":false,"arg":null}
+    ],
+    "notify_frostfire_war_march_add.request": [
+      {"name":"march","tag":0,"type":"world_march","array":false,"arg":null},
+      {"name":"kid","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_frostfire_war_march_del.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_frostfire_war_march_update.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"change","tag":3,"type":"world_march","array":false,"arg":null},
+      {"name":"del","tag":4,"type":"world_march_del_keys","array":false,"arg":null}
+    ],
+    "notify_frostfire_war_marchs.request": [
+      {"name":"session","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"datalist","tag":1,"type":"world_march","array":true,"arg":null},
+      {"name":"end_flag","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"dellist","tag":3,"type":"world_march","array":true,"arg":null}
+    ],
+    "notify_frostfire_war_self_march_add.request": [
+      {"name":"march","tag":0,"type":"world_march","array":false,"arg":null}
+    ],
+    "notify_frostfire_war_self_march_del.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"ret_code","tag":3,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_frostfire_war_self_march_update.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"change","tag":2,"type":"world_march","array":false,"arg":null},
+      {"name":"ret_code","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"del","tag":4,"type":"world_march_del_keys","array":false,"arg":null}
+    ],
+    "notify_frostfire_war_warzone_result.request": [
+      {"name":"rank","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"self_value","tag":1,"type":"integer","array":false,"arg":"0"},
+      {"name":"state","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"self_center_rank","tag":5,"type":"integer","array":false,"arg":null},
+      {"name":"self_center_value","tag":6,"type":"integer","array":false,"arg":"0"}
+    ],
+    "notify_supremacy_war_alliance_exit.request": [
+      {"name":"uid","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_supremacy_war_help_march_update.request": [
+      {"name":"reason","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_supremacy_war_mapobjs.request": [
+      {"name":"session","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"datalist","tag":1,"type":"world_mapobj","array":true,"arg":null},
+      {"name":"end_flag","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"lod","tag":4,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_supremacy_war_march_add.request": [
+      {"name":"march","tag":0,"type":"world_march","array":false,"arg":null}
+    ],
+    "notify_supremacy_war_march_del.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_supremacy_war_march_update.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"change","tag":3,"type":"world_march","array":false,"arg":null},
+      {"name":"del","tag":5,"type":"world_march_del_keys","array":false,"arg":null}
+    ],
+    "notify_supremacy_war_marchs.request": [
+      {"name":"session","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"datalist","tag":1,"type":"world_march","array":true,"arg":null},
+      {"name":"end_flag","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"dellist","tag":4,"type":"world_march","array":true,"arg":null}
+    ],
+    "notify_supremacy_war_mass_march_add.request": [
+      {"name":"march","tag":0,"type":"world_march","array":false,"arg":null},
+      {"name":"kid","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_supremacy_war_mass_march_del.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"swap_to_map","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"kid","tag":4,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_supremacy_war_mass_march_update.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"change","tag":3,"type":"world_march","array":false,"arg":null},
+      {"name":"del","tag":4,"type":"world_march_del_keys","array":false,"arg":null},
+      {"name":"kid","tag":5,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_supremacy_war_player_march_add.request": [
+      {"name":"march","tag":0,"type":"world_march","array":false,"arg":null},
+      {"name":"kid","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_supremacy_war_player_march_del.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"ret_code","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"kid","tag":4,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_supremacy_war_player_march_update.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"change","tag":2,"type":"world_march","array":false,"arg":null},
+      {"name":"ret_code","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"del","tag":4,"type":"world_march_del_keys","array":false,"arg":null},
+      {"name":"kid","tag":5,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_triangle_war_map_update.request": [
+      {"name":"mapobj_update","tag":0,"type":"notify_triangle_war_map_update.request.triangle_war_mapobjs_update","array":true,"arg":null},
+      {"name":"march_update","tag":1,"type":"notify_triangle_war_map_update.request.triangle_war_march_update","array":true,"arg":null}
+    ],
+    "notify_triangle_war_map_update.request.triangle_war_mapobjs_update": [
+      {"name":"point","tag":0,"type":"point","array":false,"arg":null},
+      {"name":"type","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"change","tag":2,"type":"world_mapobj","array":false,"arg":null},
+      {"name":"del","tag":3,"type":"world_mapobj_del_keys","array":false,"arg":null}
+    ],
+    "notify_triangle_war_map_update.request.triangle_war_march_update": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"change","tag":2,"type":"triangle_war_march","array":false,"arg":null},
+      {"name":"del","tag":3,"type":"triangle_war_march_del_keys","array":false,"arg":null}
+    ],
+    "notify_triangle_war_mapobjs.request": [
+      {"name":"session","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"datalist","tag":1,"type":"world_mapobj","array":true,"arg":null},
+      {"name":"end_flag","tag":2,"type":"boolean","array":false,"arg":null}
+    ],
+    "notify_triangle_war_march_add.request": [
+      {"name":"march","tag":0,"type":"triangle_war_march","array":false,"arg":null}
+    ],
+    "notify_triangle_war_march_del.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_triangle_war_march_update.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"change","tag":2,"type":"triangle_war_march","array":false,"arg":null},
+      {"name":"del","tag":3,"type":"triangle_war_march_del_keys","array":false,"arg":null}
+    ],
+    "notify_triangle_war_marchs.request": [
+      {"name":"session","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"datalist","tag":1,"type":"triangle_war_march","array":true,"arg":null},
+      {"name":"end_flag","tag":2,"type":"boolean","array":false,"arg":null}
+    ],
+    "notify_triangle_war_player_quit.request": [
+      {"name":"uid","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"camp","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "notify_triangle_war_warzone_result.request": [
+
+    ],
+    "pair_int_int": [
+      {"name":"k","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"v","tag":1,"type":"integer","array":false,"arg":"0"}
+    ],
+    "point": [
+      {"name":"x","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"y","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_arsenal_league_battlefield_map_info.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "req_arsenal_league_enter_battlefield.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"city_point","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"starttime","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"chat_room_id","tag":6,"type":"integer","array":false,"arg":"0"},
+      {"name":"state","tag":7,"type":"integer","array":false,"arg":null},
+      {"name":"aid","tag":8,"type":"integer","array":false,"arg":"0"},
+      {"name":"burn_down_flag","tag":9,"type":"boolean","array":false,"arg":null},
+      {"name":"side","tag":10,"type":"integer","array":false,"arg":null},
+      {"name":"free_heal_cnt","tag":11,"type":"integer","array":false,"arg":null}
+    ],
+    "req_arsenal_league_march.request": [
+      {"name":"type","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"endpoint","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"formation","tag":2,"type":"formation_build","array":false,"arg":null},
+      {"name":"extra","tag":3,"type":"req_arsenal_league_march.request.extra","array":false,"arg":null}
+    ],
+    "req_arsenal_league_march.request.extra": [
+      {"name":"prepare_time_index","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"master_marchid","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_arsenal_league_march.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"march_info","tag":1,"type":"world_march","array":false,"arg":null}
+    ],
+    "req_arsenal_league_march_speedup.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"itemid","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":2,"type":"integer","array":false,"arg":null}
+    ],
+    "req_arsenal_league_march_speedup.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_arsenal_war_battlefield_map_info.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"objs","tag":1,"type":"world_mapobj","array":true,"arg":null},
+      {"name":"marchs","tag":2,"type":"world_march","array":true,"arg":null}
+    ],
+    "req_arsenal_war_enter_battlefield.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"city_point","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"starttime","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"chat_room_id","tag":6,"type":"integer","array":false,"arg":"0"},
+      {"name":"state","tag":7,"type":"integer","array":false,"arg":null},
+      {"name":"aid","tag":8,"type":"integer","array":false,"arg":"0"},
+      {"name":"burn_down_flag","tag":9,"type":"boolean","array":false,"arg":null},
+      {"name":"battlefield_id","tag":10,"type":"string","array":false,"arg":null},
+      {"name":"free_heal_cnt","tag":11,"type":"integer","array":false,"arg":null}
+    ],
+    "req_arsenal_war_march.request": [
+      {"name":"type","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"endpoint","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"formation","tag":2,"type":"formation_build","array":false,"arg":null},
+      {"name":"extra","tag":3,"type":"req_arsenal_war_march.request.extra","array":false,"arg":null}
+    ],
+    "req_arsenal_war_march.request.extra": [
+      {"name":"prepare_time_index","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"master_marchid","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_arsenal_war_march.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"march_info","tag":1,"type":"world_march","array":false,"arg":null}
+    ],
+    "req_arsenal_war_march_speedup.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"itemid","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":2,"type":"integer","array":false,"arg":null}
+    ],
+    "req_arsenal_war_march_speedup.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_brawl_war_battlefield_map_info.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "req_brawl_war_enter_battlefield.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"city_point","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"starttime","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"chat_room_id","tag":5,"type":"integer","array":false,"arg":"0"},
+      {"name":"score","tag":7,"type":"integer","array":false,"arg":"0"}
+    ],
+    "req_brawl_war_march.request": [
+      {"name":"type","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"endpoint","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"formation","tag":2,"type":"formation_build","array":false,"arg":null}
+    ],
+    "req_brawl_war_march.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"march_info","tag":1,"type":"world_march","array":false,"arg":null}
+    ],
+    "req_brawl_war_march_speedup.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"itemid","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_brawl_war_march_speedup.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_frostfire_war_enter_warzone.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"city_point","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"starttime","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"chat_room_id","tag":6,"type":"integer","array":false,"arg":"0"},
+      {"name":"state","tag":7,"type":"integer","array":false,"arg":null},
+      {"name":"marchs","tag":8,"type":"world_march","array":true,"arg":null},
+      {"name":"player_num","tag":9,"type":"integer","array":false,"arg":null},
+      {"name":"skill_point","tag":12,"type":"integer","array":false,"arg":null}
+    ],
+    "req_frostfire_war_map_info.request": [
+      {"name":"startpoint","tag":0,"type":"point","array":false,"arg":null},
+      {"name":"endpoint","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"session","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"fulldata","tag":3,"type":"boolean","array":false,"arg":null}
+    ],
+    "req_frostfire_war_map_info.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "req_frostfire_war_march.request": [
+      {"name":"type","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"endpoint","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"formation","tag":2,"type":"formation_build","array":false,"arg":null},
+      {"name":"extra","tag":3,"type":"req_frostfire_war_march.request.extra","array":false,"arg":null}
+    ],
+    "req_frostfire_war_march.request.extra": [
+      {"name":"monsterid","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "req_frostfire_war_march.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"march_info","tag":1,"type":"world_march","array":false,"arg":null}
+    ],
+    "req_frostfire_war_march_speedup.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"itemid","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_frostfire_war_march_speedup.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_supremacy_war_enter.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"city_point","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"march_info","tag":2,"type":"world_march","array":true,"arg":null},
+      {"name":"mass_master_marchs","tag":3,"type":"world_march","array":true,"arg":null},
+      {"name":"chat_room_id","tag":4,"type":"integer","array":false,"arg":"0"},
+      {"name":"chat_alliance_room_id","tag":5,"type":"integer","array":false,"arg":"0"},
+      {"name":"begin_time","tag":6,"type":"integer","array":false,"arg":"0"},
+      {"name":"over_time","tag":7,"type":"integer","array":false,"arg":"0"},
+      {"name":"burn_down_flag","tag":8,"type":"boolean","array":false,"arg":null},
+      {"name":"skill_stop_move_time","tag":11,"type":"integer","array":false,"arg":"0"}
+    ],
+    "req_supremacy_war_map_info.request": [
+      {"name":"startpoint","tag":0,"type":"point","array":false,"arg":null},
+      {"name":"endpoint","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"session","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"fulldata","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"lod","tag":4,"type":"integer","array":false,"arg":null}
+    ],
+    "req_supremacy_war_map_info.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "req_supremacy_war_march.request": [
+      {"name":"type","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"endpoint","tag":1,"type":"point","array":false,"arg":null},
+      {"name":"formation","tag":2,"type":"formation_build","array":false,"arg":null},
+      {"name":"extra","tag":3,"type":"req_supremacy_war_march.request.extra","array":false,"arg":null}
+    ],
+    "req_supremacy_war_march.request.extra": [
+      {"name":"master_marchid","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"prepare_time_index","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"monsterid","tag":2,"type":"integer","array":false,"arg":null}
+    ],
+    "req_supremacy_war_march.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"march_info","tag":1,"type":"world_march","array":false,"arg":null}
+    ],
+    "req_supremacy_war_march_speedup.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"itemid","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":2,"type":"integer","array":false,"arg":null}
+    ],
+    "req_supremacy_war_march_speedup.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_triangle_war_enter_warzone.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"starttime","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"chat_room_id","tag":3,"type":"integer","array":false,"arg":"0"},
+      {"name":"state","tag":4,"type":"integer","array":false,"arg":null},
+      {"name":"warzone_ts","tag":9,"type":"integer","array":false,"arg":"0"},
+      {"name":"main_chat_room_id","tag":10,"type":"integer","array":false,"arg":"0"}
+    ],
+    "req_triangle_war_map_info.request": [
+      {"name":"session","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "req_triangle_war_map_info.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null}
+    ],
+    "req_triangle_war_march_move.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"path","tag":1,"type":"integer","array":true,"arg":null}
+    ],
+    "req_triangle_war_march_move.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"path","tag":1,"type":"integer","array":true,"arg":null}
+    ],
+    "req_triangle_war_march_speedup.request": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"itemid","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "req_triangle_war_march_speedup.response": [
+      {"name":"code","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":1,"type":"integer","array":false,"arg":"0"}
+    ],
+    "triangle_war_march": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"startpointid","tag":2,"type":"integer","array":false,"arg":null},
+      {"name":"endpointid","tag":3,"type":"integer","array":false,"arg":null},
+      {"name":"starttime","tag":4,"type":"integer","array":false,"arg":"0"},
+      {"name":"endtime","tag":5,"type":"integer","array":false,"arg":"0"},
+      {"name":"path","tag":6,"type":"triangle_war_path_point","array":true,"arg":null},
+      {"name":"state","tag":7,"type":"integer","array":false,"arg":null},
+      {"name":"formationid","tag":12,"type":"integer","array":false,"arg":null},
+      {"name":"move_rate","tag":13,"type":"double","array":false,"arg":null}
+    ],
+    "triangle_war_march_del_keys": [
+      {"name":"startpointid","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"endpointid","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"starttime","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"endtime","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"path","tag":4,"type":"boolean","array":false,"arg":null},
+      {"name":"move_rate","tag":5,"type":"boolean","array":false,"arg":null}
+    ],
+    "triangle_war_path_point": [
+      {"name":"dst","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"t","tag":1,"type":"integer","array":false,"arg":null}
+    ],
+    "world_mapobj": [
+      {"name":"point","tag":0,"type":"point","array":false,"arg":null},
+      {"name":"type","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"map_monster","tag":4,"type":"world_mapobj.map_monster","array":false,"arg":null},
+      {"name":"id","tag":45,"type":"integer","array":false,"arg":null}
+    ],
+    "world_mapobj.map_monster": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"atk_point","tag":1,"type":"point","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys": [
+      {"name":"map_city","tag":0,"type":"world_mapobj_del_keys.map_city_keys","array":false,"arg":null},
+      {"name":"map_camp","tag":1,"type":"world_mapobj_del_keys.map_camp_keys","array":false,"arg":null},
+      {"name":"map_resource","tag":2,"type":"world_mapobj_del_keys.map_resource_keys","array":false,"arg":null},
+      {"name":"map_minor_fort","tag":3,"type":"world_mapobj_del_keys.map_fort_keys","array":false,"arg":null},
+      {"name":"map_middle_fort","tag":8,"type":"world_mapobj_del_keys.map_fort_keys","array":false,"arg":null},
+      {"name":"map_major_fort","tag":9,"type":"world_mapobj_del_keys.map_fort_keys","array":false,"arg":null},
+      {"name":"map_alliance_flag","tag":10,"type":"world_mapobj_del_keys.map_alliance_flag_keys","array":false,"arg":null},
+      {"name":"map_alliance_hall","tag":11,"type":"world_mapobj_del_keys.map_alliance_hall_keys","array":false,"arg":null},
+      {"name":"map_alliance_trap","tag":12,"type":"world_mapobj_del_keys.map_alliance_trap_keys","array":false,"arg":null},
+      {"name":"map_icefield_hunter_boss","tag":13,"type":"world_mapobj_del_keys.map_icefield_hunter_boss_keys","array":false,"arg":null},
+      {"name":"map_alliance_mine","tag":14,"type":"world_mapobj_del_keys.map_alliance_mine_keys","array":false,"arg":null},
+      {"name":"map_boss","tag":15,"type":"world_mapobj_del_keys.map_boss_keys","array":false,"arg":null},
+      {"name":"map_alliance_mobilization","tag":16,"type":"world_mapobj_del_keys.map_alliance_mobilization_keys","array":false,"arg":null},
+      {"name":"map_capital","tag":17,"type":"world_mapobj_del_keys.map_fort_keys","array":false,"arg":null},
+      {"name":"map_tower","tag":18,"type":"world_mapobj_del_keys.map_fort_keys","array":false,"arg":null},
+      {"name":"map_alliance_showdown","tag":19,"type":"world_mapobj_del_keys.map_alliance_showdown_keys","array":false,"arg":null},
+      {"name":"map_arsenal_center","tag":20,"type":"world_mapobj_del_keys.map_arsenal_building_keys","array":false,"arg":null},
+      {"name":"map_arsenal_treatment_plant","tag":21,"type":"world_mapobj_del_keys.map_arsenal_building_keys","array":false,"arg":null},
+      {"name":"map_arsenal_factory","tag":22,"type":"world_mapobj_del_keys.map_arsenal_building_keys","array":false,"arg":null},
+      {"name":"map_arsenal_warehouse","tag":23,"type":"world_mapobj_del_keys.map_arsenal_building_keys","array":false,"arg":null},
+      {"name":"map_arsenal_zombie_camp","tag":24,"type":"world_mapobj_del_keys.map_arsenal_building_keys","array":false,"arg":null},
+      {"name":"map_arsenal_parking_apron","tag":25,"type":"world_mapobj_del_keys.map_arsenal_building_keys","array":false,"arg":null},
+      {"name":"map_arsenal_power_station","tag":26,"type":"world_mapobj_del_keys.map_arsenal_building_keys","array":false,"arg":null},
+      {"name":"map_arsenal_weapon_workshop","tag":27,"type":"world_mapobj_del_keys.map_arsenal_weapon_workshop_keys","array":false,"arg":null},
+      {"name":"map_mercenary_player_monster","tag":28,"type":"world_mapobj_del_keys.map_mercenary_player_monster_keys","array":false,"arg":null},
+      {"name":"map_frostfire_resource","tag":29,"type":"world_mapobj_del_keys.map_frostfire_resource_keys","array":false,"arg":null},
+      {"name":"map_frostfire_burst_res","tag":30,"type":"world_mapobj_del_keys.map_frostfire_resource_keys","array":false,"arg":null},
+      {"name":"map_frostfire_center","tag":31,"type":"world_mapobj_del_keys.map_frostfire_center_keys","array":false,"arg":null},
+      {"name":"map_alliance_feast","tag":32,"type":"world_mapobj_del_keys.map_alliance_feast_keys","array":false,"arg":null},
+      {"name":"map_triangle_base","tag":33,"type":"world_mapobj_del_keys.map_triangle_building_keys","array":false,"arg":null},
+      {"name":"map_triangle_center","tag":34,"type":"world_mapobj_del_keys.map_triangle_building_keys","array":false,"arg":null},
+      {"name":"map_triangle_core","tag":35,"type":"world_mapobj_del_keys.map_triangle_building_keys","array":false,"arg":null},
+      {"name":"map_triangle_city","tag":36,"type":"world_mapobj_del_keys.map_triangle_building_keys","array":false,"arg":null},
+      {"name":"map_triangle_port","tag":37,"type":"world_mapobj_del_keys.map_triangle_building_keys","array":false,"arg":null},
+      {"name":"map_supremacy_palace","tag":38,"type":"world_mapobj_del_keys.map_supremacy_palace","array":false,"arg":null},
+      {"name":"map_supremacy_guard","tag":39,"type":"world_mapobj_del_keys.map_supremacy_guard","array":false,"arg":null},
+      {"name":"map_feast","tag":40,"type":"world_mapobj_del_keys.map_alliance_feast_keys","array":false,"arg":null},
+      {"name":"map_supremacy_resource1","tag":41,"type":"world_mapobj_del_keys.map_resource_keys","array":false,"arg":null},
+      {"name":"map_supremacy_resource2","tag":42,"type":"world_mapobj_del_keys.map_resource_keys","array":false,"arg":null},
+      {"name":"map_brawl_resource","tag":43,"type":"world_mapobj_del_keys.map_resource_keys","array":false,"arg":null},
+      {"name":"map_brawl_building","tag":44,"type":"world_mapobj_del_keys.map_brawl_building_keys","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.equiped_skin_slot": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"del","tag":1,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_alliance_feast_keys": [
+      {"name":"act_info","tag":0,"type":"world_mapobj_del_keys.map_alliance_feast_keys.act_info","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_alliance_feast_keys.act_info": [
+      {"name":"reserve_ts","tag":0,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_alliance_flag_keys": [
+      {"name":"build_start_ts","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"build_finish_ts","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"occupy_aid","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"occupy_abbr","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"occupy_uid","tag":4,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_alliance_hall_keys": [
+      {"name":"build_start_ts","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"build_finish_ts","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"occupy_aid","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"occupy_abbr","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"occupy_uid","tag":4,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_alliance_mine_keys": [
+      {"name":"aid","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"abbr","tag":1,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_alliance_mobilization_keys": [
+      {"name":"aid","tag":0,"type":"integer","array":false,"arg":"0"}
+    ],
+    "world_mapobj_del_keys.map_alliance_showdown_keys": [
+      {"name":"aid","tag":0,"type":"integer","array":false,"arg":"0"}
+    ],
+    "world_mapobj_del_keys.map_alliance_trap_keys": [
+      {"name":"build_start_ts","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"build_finish_ts","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"occupy_aid","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"occupy_uid","tag":3,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_arsenal_building_keys": [
+      {"name":"id","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"aid","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"state","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"time","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"uid","tag":4,"type":"boolean","array":false,"arg":null},
+      {"name":"scores","tag":5,"type":"boolean","array":false,"arg":null},
+      {"name":"persons_max","tag":6,"type":"boolean","array":false,"arg":null},
+      {"name":"score_begin","tag":7,"type":"boolean","array":false,"arg":null},
+      {"name":"buffs","tag":8,"type":"boolean","array":false,"arg":null},
+      {"name":"side","tag":9,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_arsenal_weapon_workshop_keys": [
+      {"name":"id","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"uid","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"aid","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"march_id","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"begin_time","tag":4,"type":"boolean","array":false,"arg":null},
+      {"name":"count","tag":5,"type":"boolean","array":false,"arg":null},
+      {"name":"side","tag":6,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_boss_keys": [
+      {"name":"march_count","tag":0,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_brawl_building_keys": [
+      {"name":"uid","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"hero_gen","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"score_begin","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"state","tag":4,"type":"boolean","array":false,"arg":null},
+      {"name":"time","tag":5,"type":"boolean","array":false,"arg":null},
+      {"name":"troop_limit","tag":6,"type":"boolean","array":false,"arg":null},
+      {"name":"soldier_cnt","tag":7,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_camp_keys": [
+      {"name":"aid","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"kid","tag":2,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_city_keys": [
+      {"name":"aid","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"abbr","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"equiped_skin","tag":3,"type":"world_mapobj_del_keys.equiped_skin_slot","array":true,"arg":""}
+    ],
+    "world_mapobj_del_keys.map_fort_keys": [
+      {"name":"aid","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"abbr","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"uids","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"nick_name","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"uid","tag":4,"type":"boolean","array":false,"arg":null},
+      {"name":"time","tag":5,"type":"boolean","array":false,"arg":null},
+      {"name":"flag","tag":6,"type":"boolean","array":false,"arg":null},
+      {"name":"flag_bg","tag":7,"type":"boolean","array":false,"arg":null},
+      {"name":"aname","tag":8,"type":"boolean","array":false,"arg":null},
+      {"name":"lord_name","tag":9,"type":"boolean","array":false,"arg":null},
+      {"name":"occupied_kid","tag":10,"type":"boolean","array":false,"arg":null},
+      {"name":"def_kid","tag":11,"type":"boolean","array":false,"arg":null},
+      {"name":"lord_uid","tag":12,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_frostfire_center_keys": [
+      {"name":"uid","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"march_id","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"begin_time","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"abbr","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"nick_name","tag":4,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_frostfire_resource_keys": [
+      {"name":"uid","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"march_id","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"abbr","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"nick_name","tag":4,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_icefield_hunter_boss_keys": [
+      {"name":"aid","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"march_count","tag":1,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_mercenary_player_monster_keys": [
+      {"name":"aid","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"call_help","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"march_count","tag":2,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_resource_keys": [
+      {"name":"uid","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"aid","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"march_id","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"kid","tag":4,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_supremacy_guard": [
+      {"name":"aid","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"uid","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"name","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"kid","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"abbr","tag":4,"type":"boolean","array":false,"arg":null},
+      {"name":"flag","tag":5,"type":"boolean","array":false,"arg":null},
+      {"name":"flag_bg","tag":6,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_supremacy_palace": [
+      {"name":"state_time","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"begin_time","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"uid","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"aid","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"abbr","tag":4,"type":"boolean","array":false,"arg":null},
+      {"name":"kid","tag":5,"type":"boolean","array":false,"arg":null},
+      {"name":"name","tag":6,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_mapobj_del_keys.map_triangle_building_keys": [
+      {"name":"defenses","tag":0,"type":"boolean","array":false,"arg":null},
+      {"name":"attacks","tag":1,"type":"boolean","array":false,"arg":null},
+      {"name":"monsters_list","tag":2,"type":"boolean","array":false,"arg":null},
+      {"name":"monsters_lounge","tag":3,"type":"boolean","array":false,"arg":null},
+      {"name":"is_monster","tag":4,"type":"boolean","array":false,"arg":null},
+      {"name":"monster_revive_time","tag":5,"type":"boolean","array":false,"arg":null},
+      {"name":"atk_change","tag":6,"type":"boolean","array":false,"arg":null},
+      {"name":"def_change","tag":7,"type":"boolean","array":false,"arg":null},
+      {"name":"aid","tag":8,"type":"boolean","array":false,"arg":null},
+      {"name":"defense_begin_time","tag":9,"type":"boolean","array":false,"arg":null},
+      {"name":"lord","tag":10,"type":"boolean","array":false,"arg":null}
+    ],
+    "world_march": [
+      {"name":"id","tag":0,"type":"integer","array":false,"arg":null},
+      {"name":"owner","tag":1,"type":"integer","array":false,"arg":null},
+      {"name":"startpoint","tag":2,"type":"point","array":false,"arg":null},
+      {"name":"endpoint","tag":3,"type":"point","array":false,"arg":null},
+      {"name":"starttime","tag":6,"type":"integer","array":false,"arg":null},
+      {"name":"endtime","tag":7,"type":"integer","array":false,"arg":null},
+      {"name":"state","tag":9,"type":"integer","array":false,"arg":null},
+      {"name":"type","tag":10,"type":"integer","array":false,"arg":null},
+      {"name":"formationid","tag":14,"type":"integer","array":false,"arg":null},
+      {"name":"kid","tag":67,"type":"integer","array":false,"arg":null},
+      {"name":"world_kid","tag":68,"type":"integer","array":false,"arg":null}
+    ],
+    "world_march_del_keys": [
+
+    ]
+  },
+  "omitted_fields": {
+    "world_march": [
+      "move_startpoint",
+      "move_endpoint",
+      "move_split_segment",
+      "recon_city",
+      "atk_city",
+      "squad_list",
+      "target_type",
+      "aid",
+      "battletime",
+      "mass_city",
+      "mass_slave",
+      "mass_boss",
+      "atk_camp",
+      "mass_minor_fort",
+      "recon_camp",
+      "recon_resource",
+      "recon_minor_fort",
+      "battleresult",
+      "atk_minor_fort",
+      "supplement_fort",
+      "equiped_skin",
+      "collect_resource",
+      "def_battletime",
+      "atk_middle_fort",
+      "recon_middle_fort",
+      "mass_middle_fort",
+      "atk_major_fort",
+      "recon_major_fort",
+      "mass_major_fort",
+      "atk_monster",
+      "help_city",
+      "mass_icefield_hunter_boss",
+      "monster_siege_atk_city",
+      "recon_alliance_flag",
+      "recon_alliance_hall",
+      "atk_alliance_flag",
+      "atk_alliance_hall",
+      "mass_alliance_flag",
+      "mass_alliance_hall",
+      "mass_alliance_trap",
+      "monster_siege_atk_alliance_hall",
+      "transaction_slg",
+      "build_trap",
+      "atk_capital",
+      "mass_capital",
+      "recon_capital",
+      "atk_tower",
+      "mass_tower",
+      "recon_tower",
+      "atk_arsenal_building",
+      "mass_arsenal_building",
+      "recon_arsenal_building",
+      "collect_weapon_workshop",
+      "recon_weapon_workshop",
+      "zombie_atk_building",
+      "atk_mercenary_player_monster",
+      "mass_mercenary_player_monster",
+      "atk_mercenary_alliance_monster",
+      "atk_monster_auto",
+      "frostfire_war_atk_monster",
+      "frostfire_war_collect",
+      "frostfire_war_burst_collect",
+      "frostfire_war_atk_center",
+      "map_expression",
+      "pet_catch",
+      "to_a_banquet",
+      "truck_escort",
+      "supremacy_war_atk_guard",
+      "supremacy_war_mass_guard",
+      "supremacy_war_recon_guard",
+      "supremacy_war_atk_palace",
+      "supremacy_war_mass_palace",
+      "supremacy_war_recon_palace",
+      "to_a_supremacy_banquet",
+      "alliance_collect_resource",
+      "atk_world_boss",
+      "supremacy_war_collect_resource_1",
+      "supremacy_war_recon_resource_1",
+      "supremacy_war_collect_resource_2",
+      "supremacy_war_recon_resource_2",
+      "supremacy_war_atk_monster",
+      "side",
+      "brawl_war_collect_resource",
+      "brawl_war_atk_building",
+      "brawl_war_recon_building",
+      "brawl_war_recon_resource",
+      "segment_x_aoi"
+    ],
+    "world_mapobj": [
+      "map_city",
+      "map_resource",
+      "map_camp",
+      "map_minor_fort",
+      "map_boss",
+      "map_middle_fort",
+      "map_major_fort",
+      "map_alliance_hall",
+      "map_alliance_flag",
+      "map_alliance_trap",
+      "map_nest",
+      "map_icefield_hunter_boss",
+      "map_alliance_mine",
+      "map_alliance_mobilization",
+      "map_capital",
+      "map_tower",
+      "map_alliance_showdown",
+      "map_mercenary_player_monster",
+      "map_mercenary_alliance_monster",
+      "map_arsenal_center",
+      "map_arsenal_treatment_plant",
+      "map_arsenal_factory",
+      "map_arsenal_warehouse",
+      "map_arsenal_zombie_camp",
+      "map_arsenal_parking_apron",
+      "map_arsenal_power_station",
+      "map_arsenal_weapon_workshop",
+      "map_arsenal_war_crumb",
+      "map_alliance_arsenal",
+      "map_frostfire_resource",
+      "map_frostfire_burst_res",
+      "map_frostfire_center",
+      "map_frostfire_monster",
+      "map_frostfire_sub_res",
+      "map_expression",
+      "map_dinner_table",
+      "map_alliance_feast",
+      "map_triangle_base",
+      "map_triangle_center",
+      "map_triangle_core",
+      "map_triangle_city",
+      "map_triangle_port",
+      "map_alliance_duel",
+      "map_supremacy_guard",
+      "map_supremacy_palace",
+      "map_feast",
+      "map_supremacy_dinner_table",
+      "map_alliance_resource",
+      "map_world_boss",
+      "map_supremacy_resource1",
+      "map_supremacy_resource2",
+      "map_supremacy_monster",
+      "map_alliance_arsenal_league",
+      "map_brawl_airdrop",
+      "map_brawl_resource",
+      "map_brawl_building",
+      "map_alliance_base_war"
+    ],
+    "world_mapobj.map_monster": [
+      "win",
+      "time",
+      "pet_owner",
+      "catch_time",
+      "bomb_time"
+    ],
+    "notify_brawl_war_battlefield_result.request": [
+      "rank_data",
+      "player_data",
+      "mvps"
+    ],
+    "world_march_del_keys": [
+      "mass_city",
+      "mass_boss",
+      "mass_icefield_hunter_boss",
+      "mass_minor_fort",
+      "mass_middle_fort",
+      "mass_major_fort",
+      "mass_alliance_flag",
+      "mass_alliance_hall",
+      "mass_alliance_trap",
+      "mass_capital",
+      "mass_tower",
+      "mass_arsenal_building",
+      "aid"
+    ],
+    "req_brawl_war_enter_battlefield.response": [
+      "move_city_free",
+      "airdrop_item",
+      "airdrop_free_ts_map"
+    ],
+    "notify_arsenal_league_battlefield_map_init_info.request": [
+      "zombie_marches",
+      "side_score"
+    ],
+    "notify_arsenal_league_battlefield_result.request": [
+      "result",
+      "alliance",
+      "player",
+      "legion_reward",
+      "personal_reward"
+    ],
+    "req_arsenal_league_enter_battlefield.response": [
+      "alliance_infos",
+      "move_city_free"
+    ],
+    "req_supremacy_war_enter.response": [
+      "crystal",
+      "skills"
+    ],
+    "notify_triangle_war_warzone_result.request": [
+      "player_settle",
+      "alliance_settle"
+    ],
+    "triangle_war_march": [
+      "squad_list",
+      "camp",
+      "equiped_skin",
+      "power",
+      "origin_power"
+    ],
+    "req_triangle_war_enter_warzone.response": [
+      "camp_map",
+      "player_map",
+      "food_info",
+      "self_stat"
+    ],
+    "notify_frostfire_war_warzone_result.request": [
+      "rank_data",
+      "center_rank_data",
+      "self_type_value",
+      "self_expert_info"
+    ],
+    "req_frostfire_war_enter_warzone.response": [
+      "move_city_free",
+      "hero_injured",
+      "formation_map",
+      "skill_slots",
+      "score"
+    ],
+    "notify_arsenal_war_battlefield_result.request": [
+      "result",
+      "alliance",
+      "player",
+      "alliance_reward",
+      "personal_reward"
+    ],
+    "req_arsenal_war_battlefield_map_info.response": [
+      "situation_info",
+      "alliance_situation",
+      "zombie_marchs"
+    ],
+    "req_arsenal_war_enter_battlefield.response": [
+      "alliance_infos",
+      "move_city_free"
+    ]
+  }
+}
